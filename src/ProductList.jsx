@@ -264,8 +264,6 @@ function ProductList({ onHomeClick }) {
         setShowCart(false);
     };
 
-    const isAdded = !!addedToCart[key];
-
     return (
         <div>
             <div className="navbar" style={styleObj}>
@@ -307,11 +305,9 @@ function ProductList({ onHomeClick }) {
 
                                              
                                              <button
-                                                disabled={isAdded}
                                                 className='product-button'
                                                 onClick={() => handleAddToCart(plant)}
                                             >
-                                               {isAdded ? "Added" : "Add to Cart"}
                                             </button>
                                     </div>
                                 ))}
